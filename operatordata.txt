@@ -1,0 +1,56 @@
+# The styles of operators
+# 
+# This is basically the expression data
+# 
+# binop  [operator] [left  binding power] [right binding power]
+# tenop  [opener] [closer] [left binding power] [right binding power]
+# suffix [operator] [left  binding power]
+# prefix [operator] [right binding power]
+# group  [opener] [closer] [left binding power]
+
+binop   ::  _  201  200
+suffix  ++  _  191    _
+suffix  --  _  191    _
+group   (   )  191    _
+group   [   ]  191    _
+binop   .   _  191  190
+binop   ->  _  191  190
+prefix  ++  _    _  181
+prefix  --  _    _  181
+prefix  +   _    _  181
+prefix  -   _    _  181
+prefix  !   _    _  181
+prefix  ~   _    _  181
+prefix  *   _    _  181
+prefix  &   _    _  181
+binop   *   _   161  161
+binop   /   _   161  161
+binop   %   _   161  161
+binop   +   _   151  151
+binop   -   _   151  151
+binop  <<   _   141  141
+binop  >>   _   141  141
+binop  <    _   131  131
+binop  <=   _   131  131
+binop  >    _   131  131
+binop  >=   _   131  131
+binop  ==   _   121  121
+binop  !=   _   121  121
+binop  &    _   111  111
+binop  ^    _   101  101
+binop  |    _    91   91
+binop  &&   _    81   81
+binop  ||   _    71   71
+tenop  ?    :    61   60
+binop  =    _    61   60
+binop  +=   _    61   60
+binop  -=   _    61   60
+binop  *=   _    61   60
+binop  /=   _    61   60
+binop  %=   _    61   60
+binop  <<=  _    61   60
+binop  >>=  _    61   60
+binop  &=   _    61   60
+binop  ^=   _    61   60
+binop  |=   _    61   60
+binop  ,    _    41   41
